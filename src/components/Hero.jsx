@@ -1,12 +1,12 @@
-'use client';
-import { HERO_STATS, COMPANY, CONTACT } from '@/lib/constants';
+"use client";
+import { HERO_STATS, COMPANY, CONTACT } from "@/lib/constants";
 
 const handleNav = (href) => {
-  const id = href.replace('#', '');
+  const id = href.replace("#", "");
   const el = document.getElementById(id);
   if (el) {
     const top = el.getBoundingClientRect().top + window.scrollY - 70;
-    window.scrollTo({ top, behavior: 'smooth' });
+    window.scrollTo({ top, behavior: "smooth" });
   }
 };
 
@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="hero-left">
           <div className="hero-badge">
             <span className="badge-dot" />
-            Est. {COMPANY.founded} — Delhi NCR's Trusted Builders
+            Est. {COMPANY.founded} — Kathmandu&apos;s Trusted Builders
           </div>
 
           <h1 className="hero-title">
@@ -29,8 +29,11 @@ export default function Hero() {
             <span className="hero-line2">Dreams Into</span>
             <span className="hero-line3">Reality</span>
           </h1>
-
-          <p className="hero-desc">{COMPANY.shortDesc}</p>
+          <p className="hero-desc">
+            Native Builders delivers end-to-end construction, design, and
+            municipal services across Delhi NCR. Over 500 projects. 15+ years.
+            One trusted name.
+          </p>
 
           <div className="hero-phones">
             {CONTACT.phones.map((phone, i) => (
@@ -42,12 +45,24 @@ export default function Hero() {
           </div>
 
           <div className="hero-actions">
-            <a href="#contact" className="btn-primary"
-              onClick={(e) => { e.preventDefault(); handleNav('#contact'); }}>
+            <a
+              href="#contact"
+              className="btn-primary"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNav("#contact");
+              }}
+            >
               Get Free Quote <span className="btn-arrow">→</span>
             </a>
-            <a href="#projects" className="btn-outline"
-              onClick={(e) => { e.preventDefault(); handleNav('#projects'); }}>
+            <a
+              href="#projects"
+              className="btn-outline"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNav("#projects");
+              }}
+            >
               View Projects <span className="btn-arrow">↗</span>
             </a>
           </div>
@@ -111,7 +126,9 @@ export default function Hero() {
 
       <div className="scroll-indicator">
         <span>Scroll</span>
-        <div className="scroll-bar"><div className="scroll-dot" /></div>
+        <div className="scroll-bar">
+          <div className="scroll-dot" />
+        </div>
       </div>
     </section>
   );

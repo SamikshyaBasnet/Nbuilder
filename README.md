@@ -8,7 +8,7 @@ Professional construction company website built with **Next.js 14** for excellen
 ✅ **Centralized Data** — All content in `/src/lib/constants.js`  
 ✅ **Fast Performance** — Next.js App Router, optimized images  
 ✅ **Fully Responsive** — Mobile-first design  
-✅ **Easy to Update** — Change phone numbers, services, projects in one file  
+✅ **Easy to Update** — Change phone numbers, services, projects in one file
 
 ---
 
@@ -79,73 +79,79 @@ http://localhost:3000
 ### **All content is in ONE file: `/src/lib/constants.js`**
 
 ### Update Phone Numbers
+
 ```javascript
 export const CONTACT = {
   phones: [
-    { number: '9843369116', display: '98433 69116', primary: true },
-    { number: '9812898151', display: '98128 98151' },
-    { number: '9833623809', display: '98336 23809' },
+    { number: "9843369116", display: "98433 69116", primary: true },
+    { number: "9812898151", display: "98128 98151" },
+    { number: "9833623809", display: "98336 23809" },
   ],
   // ...
-}
+};
 ```
 
 ### Update Email
+
 ```javascript
 email: 'info@nativebuilders.in',
 ```
 
 ### Update Company Info
+
 ```javascript
 export const COMPANY = {
-  name: 'Native Builders',
-  location: 'Delhi NCR, India',
-  officeAddress: 'Native Builders Office, Delhi NCR, India',
+  name: "Native Builders",
+  location: "Kathmandu, Nepal",
+  officeAddress: "Native Builders Office, Kathmandu, Nepal",
   // ...
-}
+};
 ```
 
 ### Add/Edit Services
+
 ```javascript
 export const SERVICES = [
   {
-    id: 'construction',
-    icon: '🏗️',
-    num: '01',
-    title: 'Construction & Supervision',
-    desc: 'Full project execution...',
-    tags: ['Residential', 'Commercial'],
+    id: "construction",
+    icon: "🏗️",
+    num: "01",
+    title: "Construction & Supervision",
+    desc: "Full project execution...",
+    tags: ["Residential", "Commercial"],
   },
   // Add more services here
 ];
 ```
 
 ### Add/Edit Projects
+
 ```javascript
 export const PROJECTS = [
   {
-    id: 'sunrise-villa',
-    title: 'Sunrise Villa',
-    category: 'Residential',
-    location: 'Sector 12, Delhi',
-    status: 'Completed',
-    emoji: '🏡',
-    gradient: 'linear-gradient(145deg,#0B2563,#1A3FA0)',
+    id: "sunrise-villa",
+    title: "Sunrise Villa",
+    category: "Residential",
+    location: "Sector 12, Delhi",
+    status: "Completed",
+    emoji: "🏡",
+    gradient: "linear-gradient(145deg,#0B2563,#1A3FA0)",
   },
   // Add more projects here
 ];
 ```
 
 ### Add/Edit Testimonials
+
 ```javascript
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: 'Rajesh Kumar',
-    role: 'Homeowner — South Delhi',
-    avatar: '👨',
+    name: "Rajesh Kumar",
+    role: "Homeowner — South Delhi",
+    avatar: "👨",
     rating: 5,
-    text: 'Native Builders transformed our vision...',
+    text: "Native Builders transformed our vision...",
   },
   // Add more testimonials here
 ];
@@ -159,10 +165,10 @@ Update SEO metadata in `/src/lib/constants.js`:
 
 ```javascript
 export const SEO = {
-  title: 'Native Builders | Construction & Design Experts Delhi NCR',
-  description: 'Leading construction company in Delhi NCR...',
-  keywords: 'construction company delhi ncr, builders...',
-  ogImage: '/og-image.jpg',
+  title: "Native Builders | Construction & Design Experts Kathmandu",
+  description: "Leading construction company in Kathmandu...",
+  keywords: "construction company Kathmandu, builders...",
+  ogImage: "/og-image.jpg",
 };
 ```
 
@@ -185,6 +191,7 @@ npm start
 ## 🚀 Deployment
 
 ### Option 1: Vercel (Recommended — Free)
+
 ```bash
 # Install Vercel CLI
 npm i -g vercel
@@ -194,12 +201,14 @@ vercel
 ```
 
 ### Option 2: Netlify
+
 1. Go to [netlify.com](https://netlify.com)
 2. Connect your GitHub repo
 3. Build command: `npm run build`
 4. Publish directory: `.next`
 
 ### Option 3: Self-Hosted
+
 ```bash
 npm run build
 npm start
@@ -222,8 +231,8 @@ Update colors in `/src/styles/globals.css`:
 
 ```css
 :root {
-  --blue: #1A3FA0;
-  --gold: #D4A017;
+  --blue: #1a3fa0;
+  --gold: #d4a017;
   /* ... */
 }
 ```
@@ -232,20 +241,20 @@ Update colors in `/src/styles/globals.css`:
 
 ## 📱 Components Overview
 
-| Component | Data Source | Purpose |
-|---|---|---|
-| **Navbar** | `NAV_LINKS` | Sticky navigation with smooth scroll |
-| **Hero** | `HERO_STATS`, `COMPANY` | Full-screen hero with stats |
-| **Ticker** | `TICKER_ITEMS` | Animated services strip |
-| **Services** | `SERVICES` | 6 service cards with icons |
-| **About** | `COMPANY`, `ABOUT_FEATURES`, `MILESTONES` | Company info + timeline |
-| **Stats** | `STATS` | Animated counter section |
-| **Projects** | `PROJECTS`, `PROJECT_CATEGORIES` | Filterable project gallery |
-| **Process** | `PROCESS_STEPS` | 5-step workflow |
-| **Testimonials** | `TESTIMONIALS` | Auto-rotating carousel |
-| **Contact** | `CONTACT`, `CONTACT_SERVICES` | Form + contact info |
-| **Footer** | `CONTACT`, `FOOTER_*` | Full footer with links |
-| **FloatButtons** | `CONTACT` | Fixed WhatsApp + Call buttons |
+| Component        | Data Source                               | Purpose                              |
+| ---------------- | ----------------------------------------- | ------------------------------------ |
+| **Navbar**       | `NAV_LINKS`                               | Sticky navigation with smooth scroll |
+| **Hero**         | `HERO_STATS`, `COMPANY`                   | Full-screen hero with stats          |
+| **Ticker**       | `TICKER_ITEMS`                            | Animated services strip              |
+| **Services**     | `SERVICES`                                | 6 service cards with icons           |
+| **About**        | `COMPANY`, `ABOUT_FEATURES`, `MILESTONES` | Company info + timeline              |
+| **Stats**        | `STATS`                                   | Animated counter section             |
+| **Projects**     | `PROJECTS`, `PROJECT_CATEGORIES`          | Filterable project gallery           |
+| **Process**      | `PROCESS_STEPS`                           | 5-step workflow                      |
+| **Testimonials** | `TESTIMONIALS`                            | Auto-rotating carousel               |
+| **Contact**      | `CONTACT`, `CONTACT_SERVICES`             | Form + contact info                  |
+| **Footer**       | `CONTACT`, `FOOTER_*`                     | Full footer with links               |
+| **FloatButtons** | `CONTACT`                                 | Fixed WhatsApp + Call buttons        |
 
 ---
 

@@ -2,69 +2,79 @@
    NATIVE BUILDERS — Global Styles
    Theme: White + Royal Blue + Golden Yellow (matching brand image)
    ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   /* ── BLUE (primary brand color) ── */
-  --blue-dark:    #0B2563;
-  --blue:         #1A3FA0;
-  --blue-mid:     #2352BF;
-  --blue-light:   #3B6FD4;
-  --blue-xlight:  #6B9AE8;
-  --blue-pale:    #E8EFFE;
-  --blue-glow:    rgba(26, 63, 160, 0.18);
-  --blue-soft:    rgba(26, 63, 160, 0.07);
+  --blue-dark: #0b2563;
+  --blue: #1a3fa0;
+  --blue-mid: #2352bf;
+  --blue-light: #3b6fd4;
+  --blue-xlight: #6b9ae8;
+  --blue-pale: #e8effe;
+  --blue-glow: rgba(26, 63, 160, 0.18);
+  --blue-soft: rgba(26, 63, 160, 0.07);
 
   /* ── GOLD / YELLOW (accent buttons & highlights) ── */
-  --gold:         #D4A017;
-  --gold-light:   #EDB830;
-  --gold-dark:    #A87B0A;
-  --gold-glow:    rgba(212, 160, 23, 0.30);
-  --gold-soft:    rgba(212, 160, 23, 0.10);
+  --gold: #d4a017;
+  --gold-light: #edb830;
+  --gold-dark: #a87b0a;
+  --gold-glow: rgba(212, 160, 23, 0.3);
+  --gold-soft: rgba(212, 160, 23, 0.1);
 
   /* ── WHITE / LIGHT NEUTRALS ── */
-  --white:        #FFFFFF;
-  --off-white:    #F7F9FC;
-  --light-grey:   #EEF2F7;
-  --mid-grey:     #D1D9E6;
-  --border:       #C8D4E8;
+  --white: #ffffff;
+  --off-white: #f7f9fc;
+  --light-grey: #eef2f7;
+  --mid-grey: #d1d9e6;
+  --border: #c8d4e8;
 
   /* ── TEXT ── */
-  --text-dark:    #0D1B3E;
-  --text-body:    #2D3D5C;
-  --text-muted:   #637899;
-  --text-light:   #8FA3C0;
+  --text-dark: #0d1b3e;
+  --text-body: #2d3d5c;
+  --text-muted: #637899;
+  --text-light: #8fa3c0;
 
   /* ── LEGACY ALIASES so component CSS still works unchanged ── */
-  --navy:             var(--blue-dark);
-  --navy-card:        var(--blue);
-  --navy-border:      var(--blue-mid);
-  --navy-light:       #1D3A90;
-  --teal:             var(--blue);
-  --teal-dark:        var(--blue-dark);
-  --teal-mid:         var(--blue-mid);
-  --teal-light:       var(--blue-light);
-  --teal-glow:        var(--blue-glow);
-  --orange:           var(--gold);
-  --orange-light:     var(--gold-light);
-  --orange-dark:      var(--gold-dark);
-  --orange-glow:      var(--gold-glow);
-  --text-light-alias: #E8EDF8;
+  --navy: var(--blue-dark);
+  --navy-card: var(--blue);
+  --navy-border: var(--blue-mid);
+  --navy-light: #1d3a90;
+  --teal: var(--blue);
+  --teal-dark: var(--blue-dark);
+  --teal-mid: var(--blue-mid);
+  --teal-light: var(--blue-light);
+  --teal-glow: var(--blue-glow);
+  --orange: var(--gold);
+  --orange-light: var(--gold-light);
+  --orange-dark: var(--gold-dark);
+  --orange-glow: var(--gold-glow);
+  --text-light-alias: #e8edf8;
 
   /* Typography */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
-  --font-hero:    'Bebas Neue', sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Noto Sans", sans-serif;
+  --font-hero: "Inter", sans-serif;
 
   /* Spacing */
   --section-py: 100px;
-  --container:  1280px;
-  --nav-h:      70px;
+  --container: 1280px;
+  --nav-h: 70px;
 }
 
 /* ── REDEFINE text-light for light sections ── */
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
 
 body {
   background: var(--off-white);
@@ -75,20 +85,49 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--light-grey); }
-::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--light-grey);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
 
-::selection { background: var(--gold); color: var(--white); }
+::selection {
+  background: var(--gold);
+  color: var(--white);
+}
 
-a { text-decoration: none; color: inherit; }
-img { display: block; max-width: 100%; }
-button { cursor: pointer; border: none; background: none; font-family: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
 
 /* ── LAYOUT ── */
-.container { max-width: var(--container); margin: 0 auto; padding: 0 40px; }
-.section   { padding: var(--section-py) 0; }
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section {
+  padding: var(--section-py) 0;
+}
 
 /* ── SECTION TAG ── */
 .section-tag {
@@ -103,13 +142,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 14px;
 }
 .section-tag::before {
-  content: '';
-  width: 28px; height: 2px;
+  content: "";
+  width: 28px;
+  height: 2px;
   background: var(--gold);
   flex-shrink: 0;
 }
-.on-dark .section-tag { color: var(--gold-light); }
-.on-dark .section-tag::before { background: var(--gold-light); }
+.on-dark .section-tag {
+  color: var(--gold-light);
+}
+.on-dark .section-tag::before {
+  background: var(--gold-light);
+}
 
 /* ── SECTION TITLE ── */
 .section-title {
@@ -119,16 +163,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.1;
   color: var(--text-dark);
 }
-.section-title em   { color: var(--blue); font-style: normal; }
-.section-title .gold { color: var(--gold-dark); font-style: normal; }
-.on-dark .section-title    { color: var(--white); }
-.on-dark .section-title em { color: var(--gold-light); }
+.section-title em {
+  color: var(--blue);
+  font-style: normal;
+}
+.section-title .gold {
+  color: var(--gold-dark);
+  font-style: normal;
+}
+.on-dark .section-title {
+  color: var(--white);
+}
+.on-dark .section-title em {
+  color: var(--gold-light);
+}
 
 /* ── DIVIDER ── */
 .divider {
-  width: 50px; height: 3px;
+  width: 50px;
+  height: 3px;
   background: linear-gradient(90deg, var(--gold), var(--blue-light));
-  margin: 20px 0; border-radius: 2px;
+  margin: 20px 0;
+  border-radius: 2px;
 }
 
 /* ── SECTION SUBTITLE ── */
@@ -138,20 +194,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--text-muted);
   font-weight: 300;
 }
-.on-dark .section-subtitle { color: rgba(255,255,255,0.65); }
+.on-dark .section-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+}
 
 /* ── BUTTONS ── */
 /* Gold = primary CTA */
 .btn-primary {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: var(--gold);
   color: var(--text-dark);
   padding: 14px 30px;
   font-family: var(--font-body);
-  font-weight: 700; font-size: 14px; letter-spacing: 0.5px;
-  border: none; cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
   transition: all 0.3s ease;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  /* clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); */
+  border-radius: 0.25rem;
 }
 .btn-primary:hover {
   background: var(--gold-light);
@@ -161,15 +225,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Blue = secondary */
 .btn-teal {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: var(--blue);
   color: var(--white);
   padding: 14px 30px;
   font-family: var(--font-body);
-  font-weight: 700; font-size: 14px; letter-spacing: 0.5px;
-  border: none; cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
   transition: all 0.3s ease;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
 }
 .btn-teal:hover {
   background: var(--blue-mid);
@@ -179,16 +255,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Outline */
 .btn-outline {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: transparent;
   color: var(--blue);
   padding: 13px 30px;
   font-family: var(--font-body);
-  font-weight: 600; font-size: 14px; letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
   border: 2px solid var(--blue);
   cursor: pointer;
   transition: all 0.3s ease;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
 }
 .btn-outline:hover {
   background: var(--blue);
@@ -196,15 +283,49 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--blue-glow);
 }
-.on-dark .btn-outline { color: var(--white); border-color: rgba(255,255,255,0.45); }
-.on-dark .btn-outline:hover { background: rgba(255,255,255,0.14); border-color: var(--white); }
+.on-dark .btn-outline {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+.on-dark .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--white);
+}
 
 /* ── ANIMATIONS ── */
-.fade-up   { opacity:0; transform:translateY(32px);  transition:opacity .7s ease,transform .7s ease; }
-.fade-left { opacity:0; transform:translateX(-32px); transition:opacity .7s ease,transform .7s ease; }
-.fade-right{ opacity:0; transform:translateX(32px);  transition:opacity .7s ease,transform .7s ease; }
-.fade-up.visible,.fade-left.visible,.fade-right.visible { opacity:1; transform:translate(0); }
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible,
+.fade-left.visible,
+.fade-right.visible {
+  opacity: 1;
+  transform: translate(0);
+}
 
 /* ── RESPONSIVE ── */
-@media (max-width: 768px) { :root { --section-py: 70px; } .container { padding: 0 20px; } }
-@media (max-width: 480px) { :root { --section-py: 56px; } }
+@media (max-width: 768px) {
+  :root {
+    --section-py: 70px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --section-py: 56px;
+  }
+}
