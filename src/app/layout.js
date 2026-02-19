@@ -12,6 +12,7 @@ import "@/styles/Testimonials.css";
 import "@/styles/Contact.css";
 import "@/styles/Footer.css";
 import "@/styles/FloatButtons.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata = {
   title: SEO.title,
@@ -69,7 +70,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_ID} />
+        {children}
+      </body>
     </html>
   );
 }

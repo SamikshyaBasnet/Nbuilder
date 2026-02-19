@@ -1,6 +1,11 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { CONTACT, CONTACT_INFO } from "@/lib/constants";
+import {
+  trackPhoneClick,
+  trackWhatsAppClick,
+  trackEmailClick,
+} from "@/lib/analytics";
 
 export default function Contact() {
   const refs = useRef([]);
@@ -74,6 +79,7 @@ export default function Contact() {
             <a
               href={`tel:${CONTACT.phones[0].number}`}
               className="btn-teal btn-large"
+              onClick={() => trackPhoneClick(CONTACT.phones[0].number)}
             >
               📞 Call Now
             </a>
@@ -82,12 +88,14 @@ export default function Contact() {
               target="_blank"
               rel="noreferrer"
               className="ci-whatsapp btn-large"
+              onClick={trackWhatsAppClick}
             >
               💬 WhatsApp Us
             </a>
             <a
               href={`mailto:${CONTACT.email}`}
               className="btn-primary btn-large"
+              onClick={trackEmailClick}
             >
               ✉️ Email Us
             </a>

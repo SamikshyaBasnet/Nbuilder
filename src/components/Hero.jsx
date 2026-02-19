@@ -1,5 +1,6 @@
 "use client";
 import { HERO_STATS, COMPANY, CONTACT } from "@/lib/constants";
+import { trackPhoneClick, trackButtonClick } from "@/lib/analytics";
 
 const handleNav = (href) => {
   const id = href.replace("#", "");
@@ -37,7 +38,12 @@ export default function Hero() {
 
           <div className="hero-phones">
             {CONTACT.phones.map((phone, i) => (
-              <a href={`tel:${phone.number}`} className="phone-chip" key={i}>
+              <a
+                href={`tel:${phone.number}`}
+                className="phone-chip"
+                key={i}
+                onClick={() => trackPhoneClick(phone.number)}
+              >
                 <span className="phone-icon">📞</span>
                 <span>{phone.display}</span>
               </a>

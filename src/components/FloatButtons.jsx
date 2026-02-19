@@ -1,17 +1,17 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { CONTACT } from '@/lib/constants';
-
+"use client";
+import { useState, useEffect } from "react";
+import { CONTACT } from "@/lib/constants";
+import { trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
 export default function FloatButtons() {
   const [showTop, setShowTop] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setShowTop(window.scrollY > 400);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <div className="float-cluster">
@@ -22,6 +22,7 @@ export default function FloatButtons() {
         className="float-btn whatsapp"
         aria-label="Chat on WhatsApp"
         title="Chat on WhatsApp"
+        onClick={trackWhatsAppClick}
       >
         <span className="float-icon">💬</span>
         <span className="float-label">WhatsApp</span>
@@ -32,6 +33,7 @@ export default function FloatButtons() {
         className="float-btn call"
         aria-label="Call Now"
         title="Call Now"
+        onClick={() => trackPhoneClick(CONTACT.phones[0].number)}
       >
         <span className="float-icon">📞</span>
         <span className="float-label">Call Now</span>
