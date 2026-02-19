@@ -22,7 +22,7 @@ export const CONTACT = {
     { number: "9843369116", display: "98433 69116", primary: true },
     { number: "9812898151", display: "98128 98151" },
   ],
-  email: "info@nativebuilders.in",
+  email: "info@nativebuilders.np",
   whatsapp: "9779843369116", // with country code, no +
 
   workingHours: {
