@@ -94,7 +94,7 @@ export default function Navbar() {
             })}
           </nav>
 
-          <a
+          {/* <a
             href="#contact"
             className="nav-cta"
             onClick={(e) => {
@@ -103,7 +103,7 @@ export default function Navbar() {
             }}
           >
             Get Free Quote
-          </a>
+          </a> */}
 
           <button
             className={`hamburger${menuOpen ? " open" : ""}`}
@@ -174,7 +174,7 @@ export default function Navbar() {
           <a href="tel:9812898151" className="mobile-phone">
             📞 98128 98151
           </a>
-          <a
+          {/* <a
             href="#contact"
             className="btn-primary"
             style={{ marginTop: 20, justifyContent: "center" }}
@@ -184,7 +184,7 @@ export default function Navbar() {
             }}
           >
             Get Free Quote →
-          </a>
+          </a> */}
         </div>
       </nav>
     </>

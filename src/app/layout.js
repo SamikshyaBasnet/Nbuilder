@@ -20,10 +20,16 @@ export const metadata = {
   authors: [{ name: COMPANY.name }],
   creator: COMPANY.name,
   publisher: COMPANY.name,
+  // Favicon
+  icons: {
+    icon: "/images/logo.jpg", // standard favicon
+    shortcut: "/images/logo.jpg", // legacy support
+    apple: "/images/logo.jpg", // optional for iOS
+  },
   openGraph: {
     title: SEO.title,
     description: SEO.description,
-    url: "https://nativebuilders.in",
+    url: "https://native-builders.netlify.app/",
     siteName: COMPANY.name,
     images: [
       {
@@ -33,7 +39,7 @@ export const metadata = {
         alt: COMPANY.name,
       },
     ],
-    locale: "en_IN",
+    locale: "en_NP",
     type: "website",
   },
   twitter: {

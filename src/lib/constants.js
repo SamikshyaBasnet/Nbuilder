@@ -10,7 +10,7 @@ export const COMPANY = {
   shortDesc:
     "Kathmandu, Nepal's trusted partner for construction, design, and project management.",
   fullDesc:
-    "Native Builders is a full-service construction and design firm based in Kathmandu, Nepal. Founded in 2021, we've grown from a small contracting team to one of the region's most trusted names — delivering 500+ projects across residential, commercial, and industrial sectors.",
+    "Native Builders is a full-service construction and design firm based in Kathmandu, Nepal. Founded in 2021, we've grown from a small contracting team to one of the region's most trusted names — delivering 100+ projects across residential, commercial, and industrial sectors.",
   founded: "2021",
   location: "Kathmandu, Nepal",
   officeAddress: "Native Builders Office, Kathmandu, Nepal",
@@ -42,10 +42,10 @@ export const CONTACT = {
 export const SEO = {
   title: "Native Builders | Construction & Design Experts Kathmandu, Nepal",
   description:
-    "Leading construction company in Kathmandu, Nepal. 500+ projects, 15+ years experience. Services: Construction, Municipal Approvals, Interior Design, Project Management.",
+    "Leading construction company in Kathmandu, Nepal. 100+ projects, 5+ years experience. Services: Construction, Municipal Approvals, Interior Design, Project Management.",
   keywords:
     "construction company kathmandu nepal, builders in delhi, interior design, municipal drawing, construction supervision, project management delhi",
-  ogImage: "/og-image.jpg", // Add your image to /public folder
+  ogImage: "/images/logo.jpg", // Add your image to /public folder
 };
 
 // ── NAVIGATION LINKS ──
@@ -61,10 +61,10 @@ export const NAV_LINKS = [
 
 // ── HERO STATS ──
 export const HERO_STATS = [
-  { num: "500+", label: "Projects Done" },
-  { num: "15+", label: "Years Experience" },
+  { num: "100+", label: "Projects Done" },
+  { num: "5+", label: "Years Experience" },
   { num: "98%", label: "Client Satisfaction" },
-  { num: "50+", label: "Expert Team" },
+  { num: "10+", label: "Expert Team" },
 ];
 
 // ── SERVICES ──
@@ -165,12 +165,12 @@ export const MILESTONES = [
 
 // ── STATS (animated counters section) ──
 export const STATS = [
-  { num: 500, suffix: "+", label: "Projects Delivered", icon: "🏗️" },
-  { num: 15, suffix: "+", label: "Years of Experience", icon: "📅" },
+  { num: 100, suffix: "+", label: "Projects Delivered", icon: "🏗️" },
+  { num: 5, suffix: "+", label: "Years of Experience", icon: "📅" },
   { num: 98, suffix: "%", label: "Client Satisfaction", icon: "⭐" },
-  { num: 50, suffix: "+", label: "Expert Professionals", icon: "👷" },
-  { num: 30, suffix: "+", label: "Ongoing Projects", icon: "🔧" },
-  { num: 200, suffix: "+", label: "Residential Builds", icon: "🏡" },
+  { num: 10, suffix: "+", label: "Expert Professionals", icon: "👷" },
+  { num: 10, suffix: "+", label: "Ongoing Projects", icon: "🔧" },
+  { num: 100, suffix: "+", label: "Residential Builds", icon: "🏡" },
 ];
 
 // ── WHY CHOOSE US ──

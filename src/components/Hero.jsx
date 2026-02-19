@@ -31,7 +31,7 @@ export default function Hero() {
           </h1>
           <p className="hero-desc">
             Native Builders delivers end-to-end construction, design, and
-            municipal services across Delhi NCR. Over 500 projects. 15+ years.
+            municipal services across Delhi NCR. Over 500 projects. 5+ years.
             One trusted name.
           </p>
 
@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
 
           <div className="hero-actions">
-            <a
+            {/* <a
               href="#contact"
               className="btn-primary"
               onClick={(e) => {
@@ -54,7 +54,7 @@ export default function Hero() {
               }}
             >
               Get Free Quote <span className="btn-arrow">→</span>
-            </a>
+            </a> */}
             <a
               href="#projects"
               className="btn-outline"
@@ -117,7 +117,7 @@ export default function Hero() {
             </div>
 
             <div className="vis-float-badge">
-              <div className="float-num">500+</div>
+              <div className="float-num">100+</div>
               <div className="float-label">Projects Delivered</div>
             </div>
           </div>

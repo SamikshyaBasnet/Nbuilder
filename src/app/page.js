@@ -10,6 +10,7 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatButtons from "@/components/FloatButtons";
+import Head from "next/head";
 
 export default function HomePage() {
   return (

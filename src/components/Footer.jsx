@@ -5,6 +5,7 @@ import {
   FOOTER_SERVICE_LINKS,
   FOOTER_COMPANY_LINKS,
 } from "@/lib/constants";
+import Image from "next/image";
 
 const handleNav = (href) => {
   const id = href.replace("#", "");
@@ -27,7 +28,14 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <div className="footer-logo">
-                <div className="footer-logo-box">🏗</div>
+                <div className="footer-logo-bo">
+                  <Image
+                    src="/images/logo.jpg"
+                    alt="Company Logo"
+                    width={40}
+                    height={40}
+                  />
+                </div>
                 <div className="footer-logo-text">
                   <span className="fl-name">NATIVE</span>
                   <span className="fl-sub">Builders</span>
@@ -140,7 +148,7 @@ export default function Footer() {
                 ))}
               </div>
 
-              <a
+              {/* <a
                 href="#contact"
                 className="btn-primary footer-cta"
                 onClick={(e) => {
@@ -149,7 +157,7 @@ export default function Footer() {
                 }}
               >
                 Get Free Quote →
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -166,7 +174,7 @@ export default function Footer() {
               <a href="#">Terms of Service</a>
               <a href="#">Sitemap</a>
             </div>
-            <p className="footer-made">🇮🇳 Proudly serving {COMPANY.location}</p>
+            {/* <p className="footer-made">🇮🇳 Proudly serving {COMPANY.location}</p> */}
           </div>
         </div>
       </div>

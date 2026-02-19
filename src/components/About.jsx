@@ -1,18 +1,26 @@
-'use client';
-import { useEffect, useRef } from 'react';
-import { COMPANY, ABOUT_FEATURES, MILESTONES } from '@/lib/constants';
+"use client";
+import { useEffect, useRef } from "react";
+import { COMPANY, ABOUT_FEATURES, MILESTONES } from "@/lib/constants";
 
 export default function About() {
   const refs = useRef([]);
   useEffect(() => {
     const obs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            obs.unobserve(e.target);
+          }
+        }),
       { threshold: 0.1 }
     );
     refs.current.forEach((el) => el && obs.observe(el));
     return () => obs.disconnect();
   }, []);
-  const r = (i) => (el) => { refs.current[i] = el; };
+  const r = (i) => (el) => {
+    refs.current[i] = el;
+  };
 
   return (
     <section className="section about-section" id="about">
@@ -25,8 +33,12 @@ export default function About() {
                 <div className="about-img-overlay" />
               </div>
               <div className="about-exp-badge">
-                <span className="exp-num">15+</span>
-                <span className="exp-label">Years of<br />Excellence</span>
+                <span className="exp-num">5+</span>
+                <span className="exp-label">
+                  Years of
+                  <br />
+                  Excellence
+                </span>
               </div>
             </div>
 
@@ -41,14 +53,23 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-content fade-right" ref={r(1)} style={{ transitionDelay: '0.15s' }}>
+          <div
+            className="about-content fade-right"
+            ref={r(1)}
+            style={{ transitionDelay: "0.15s" }}
+          >
             <div className="section-tag">Who We Are</div>
-            <h2 className="section-title">Native <em>Builders</em></h2>
+            <h2 className="section-title">
+              Native <em>Builders</em>
+            </h2>
             <div className="divider" />
 
             <p className="about-para">{COMPANY.fullDesc}</p>
             <p className="about-para">
-              Our multidisciplinary team of architects, engineers, designers, and project managers work in complete synergy — giving clients a single point of contact for their entire construction journey, from first sketch to final handover.
+              Our multidisciplinary team of architects, engineers, designers,
+              and project managers work in complete synergy — giving clients a
+              single point of contact for their entire construction journey,
+              from first sketch to final handover.
             </p>
 
             <div className="about-features">
@@ -64,12 +85,28 @@ export default function About() {
             </div>
 
             <div className="about-actions">
-              <a href="#contact" className="btn-primary"
-                onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
+              <a
+                href="#contact"
+                className="btn-primary"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+              >
                 Talk to an Expert →
               </a>
-              <a href="#services" className="btn-outline"
-                onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
+              <a
+                href="#services"
+                className="btn-outline"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .getElementById("services")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+              >
                 View Services →
               </a>
             </div>
